@@ -1,0 +1,49 @@
+---
+title: Home
+template: splash
+editUrl: false
+lastUpdated: false
+hero:
+  title: |
+    Kenangan
+    <span
+      class="text-transparent
+        bg-clip-text bg-gradient-to-b
+        from-accent-500 to-accent-800"
+    >
+      lama mu
+    </span> ada disini.
+  tagline: Isi server discord lama AST, tanpa perlu join server discordnya. Dengan isi lebih lengkap dari sebelumnya!
+  image:
+    file: ../../assets/ast_logo.webp
+  actions:
+    - text: Ayo!
+      link: /utama
+      icon: rocket
+      variant: primary
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+import CardMouseMoveScript from "../../components/CardMouseMoveScript";
+
+<CardGrid stagger>
+  <Card title="Lengkap isinya!" icon="open-book">
+    Jadi gak bakal ada tuh namanya "mana nih channel #general" atau
+    "mana nih channel #bot-commands" karena semua kenangan ada disini!
+  </Card>
+  <Card title="Gak bakal hilang" icon="sun">
+    Kali ini website ini bakal gak bakal hilang (kayak website lama)
+    karena website ini bakal ada source codenya di github,
+    jadi kalian bisa fork ubah sedikit.
+  </Card>
+  <Card title="Langsung dari sumbernya" icon="approve-check">
+    Di website ini sumbernya gak ada yang diedit (lagian capek edit file 1GB+ wkwk),
+    jadi kalian tau sejarah server ini dari awal dan akhir.
+  </Card>
+  <Card title="Lu gak perlu join servernya!" icon="laptop">
+    Karena semua isi server ada disini, lu gak perlu join servernya lagi.
+    Tapi kalo lu mau join servernya, silahkan aja (kalo ada linknya).
+  </Card>
+</CardGrid>
+
+<CardMouseMoveScript client:only />

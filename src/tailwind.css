@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Add additional Tailwind styles to this file, for example with @layer:
+https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
+*/
+
+@layer base {
+/* abc-ginto-normal-medium - latin */
+   @font-face {
+     font-family: 'ABC Ginto Normal';
+     font-style: normal;
+     font-weight: 600;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ABCGintoNormal-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ABCGintoNormal-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* abc-ginto-normal-bold - latin */
+   @font-face {
+     font-family: 'ABC Ginto Normal';
+     font-style: normal;
+     font-weight: 700;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ABCGintoNormal-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ABCGintoNormal-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-extrabolditalic - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: italic;
+     font-weight: bold;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-ExtraBoldItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-ExtraBoldItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-bold - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: normal;
+     font-weight: bold;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-extrabold - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: normal;
+     font-weight: bold;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-semibold - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: normal;
+     font-weight: 600;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-Semibold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-Semibold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-normalitalic - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: italic;
+     font-weight: normal;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-NormalItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-NormalItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-medium - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: normal;
+     font-weight: 500;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-mediumitalic - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: italic;
+     font-weight: 500;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-MediumItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-MediumItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-normal - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: normal;
+     font-weight: normal;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-Normal.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-Normal.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+/* ggsans-semibolditalic - latin */
+   @font-face {
+     font-family: 'gg sans';
+     font-style: italic;
+     font-weight: 600;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/ggsans-SemiboldItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/fonts/ggsans-SemiboldItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+}
+
+:is([data-theme="dark"] body) {
+  --sl-color-text-accent: var(--sl-color-accent) !important;
+  --sl-color-text-invert: var(--sl-color-white) !important;
+}
+
+:is([data-theme="dark"] .sl-markdown-content a:not(:where(.not-content *))) {
+  --sl-color-text-accent: #e60000 !important;
+}
+
+header.header {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  @apply h-14 bg-[var(--sl-color-bg)];
+}
+
+@media (min-width: 50rem) {
+  site-search {
+    @apply inline w-64;
+  }
+
+  site-search > button {
+    @apply !h-8 !border-none !bg-neutral-100 !pe-2.5 !ps-2.5 !text-black hover:!bg-neutral-200 dark:!bg-neutral-800 dark:!text-white dark:hover:!bg-neutral-700/80;
+  }
+}
+
+.site-title:hover {
+  @apply opacity-75;
+}
+
+.sidebar-pane {
+  background-color: var(--sl-color-bg);
+  border-right: 1px solid var(--sl-color-gray-6);
+}
+
+.sidebar-content ul li {
+  margin-top: 0;
+}
+
+.sidebar-content ul li details summary {
+  border-radius: 0.25rem;
+}
+
+.sidebar-content ul li details summary:hover,
+.sidebar-content ul li a:not([aria-current="page"]):hover,
+.sidebar-content ul li details ul li a:not([aria-current="page"]):hover,
+.right-sidebar a:not([aria-current="true"]):hover {
+  background-color: rgb(94 0 0 / 0.2);
+}
+
+.social-icons a {
+  @apply text-black dark:text-white;
+}
+
+.large {
+  @apply tracking-tight;
+}
+
+[data-has-hero] .large {
+  @apply tracking-tighter;
+}
+
+:root {
+  --overlay-blurple: rgb(109 0 0 / 0.2);
+}
+
+[data-has-hero] .page {
+  background:
+    linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
+    radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh /
+      105vw 200vh,
+    radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50%
+      calc(100% + 20rem) / 60rem 30rem;
+}
+
+[data-has-hero] header {
+  border-bottom: 1px solid transparent;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+[data-has-hero] .hero > img {
+  filter: drop-shadow(0 0 3rem var(--overlay-blurple));
+}
+
+[data-has-hero] .card {
+  border-radius: 12px;
+  position: relative;
+  background: radial-gradient(
+      300px circle at top left,
+      rgba(160, 0, 0, 0.081) 20%,
+      transparent 100%
+    ),
+    radial-gradient(
+      300px circle at bottom right,
+      rgba(160, 0, 0, 0.081) 20%,
+      transparent 100%
+    );
+}
+
+[data-has-hero] .card::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  transition: opacity 400ms ease 0s;
+  will-change: background, opacity;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(98, 0, 0, 0.15),
+    transparent 40%
+  );
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+[data-has-hero] .card:hover::before {
+  opacity: 1;
+}
+
+.action.primary {
+  @apply border border-accent-700 bg-accent-400/50 text-black hover:bg-accent-500/50 dark:border-accent-500 dark:bg-accent-950 dark:text-white dark:hover:bg-accent-900/80;
+}
+
+.hero > img {
+  animation: vert-move 3s ease-in-out infinite;
+  @apply rounded-full;
+}
+
+@keyframes vert-move {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+h1 {
+  @apply font-bold tracking-tighter;
+  font-family: 'ABC Ginto Normal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+  @apply tracking-tight;
+  font-family: 'ABC Ginto Normal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3, h4, h5, h6 {
+  @apply tracking-tight;
+  font-family: 'ABC Ginto Normal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card .title {
+  @apply tracking-tighter;
+}
+
+.heading-link::after {
+  content: "#";
+  padding-inline-start: 0.25em;
+  opacity: 0;
+  transition: all 0.3;
+}
+
+.heading-link:hover::after {
+  color: var(--sl-color-text-accent);
+  transition: all 0.3;
+  opacity: 1;
+}
+
+.heading-link {
+  text-decoration: none;
+  color: var(--sl-color-white) !important;
+}

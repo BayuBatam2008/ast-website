@@ -1,0 +1,9 @@
+.astro
+dist/
+node_modules/
+.vscode
+.history/
+*.vsix
+.history
+.ionide
+
