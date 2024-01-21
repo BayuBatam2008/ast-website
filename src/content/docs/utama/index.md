@@ -37,4 +37,8 @@ Dia itu admin og server discord lama dan baru AST. Dia dikenal sangat kejam dan 
 
 ## Siapa itu NaughtyGoat
 
-Dia itu
+Dia itu admin server AST lama setelah take over dari Nathan, dia ini admin the best yang AST miliki. Gak segalak yang dulu (ugh..ugh... Nat...ugh..ugh). Dia sekarang menjadi admin di server AST yang baru.
+
+## Siapa itu Palpale
+
+Mau tau siapa itu Palpale? ya saya, yang mengerjakan website ini. Dulu dia itu seorang hakim di server lama AST, sekarang dia menjadi member "spesial" di server AST baru.
